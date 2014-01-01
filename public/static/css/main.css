@@ -1,0 +1,289 @@
+/**
+  	Mixin to handle transitions.
+  	@param{List} $props SASS list of properties that need to be transitions.
+  	@param{Number} $time time for the transition
+  	@param{String} $easeType type of easing to be used.
+*/
+/**
+  	Mixin to handle transforms.
+  	@param{List} $props SASS list of properties that need to be transitions.
+  	@param{Number} $time time for the transition
+  	@param{String} $easeType type of easing to be used.
+*/
+/**
+  Calculates a em font based on the
+  standard 100% font size for the browser,
+  which is usually 16px
+*/
+/* line 4, ../scss/_header.scss */
+header {
+  border-top: solid 4px #55acee;
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
+  display: block;
+}
+/* line 12, ../scss/_header.scss */
+header .wrap {
+  padding-left: 20px;
+  position: relative;
+  text-align: center;
+}
+/* line 18, ../scss/_header.scss */
+header .wrap #intro {
+  margin-top: -900px;
+  /**
+    The sign-in button.
+   */
+}
+/* line 20, ../scss/_header.scss */
+header .wrap #intro .title {
+  font-size: 600%;
+  letter-spacing: -4px;
+  text-align: center;
+}
+/* line 26, ../scss/_header.scss */
+header .wrap #intro #disclaimer-link {
+  font-size: 60%;
+  font-style: italic;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  color: #333;
+}
+/* line 33, ../scss/_header.scss */
+header .wrap #intro #disclaimer-link:hover {
+  cursor: pointer;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  color: #55acee;
+}
+/* line 43, ../scss/_header.scss */
+header .wrap #intro #signin {
+  height: 28px;
+  text-align: center;
+  width: 158px;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+}
+/* line 53, ../scss/_header.scss */
+header .wrap #intro .not-signed-in {
+  display: block;
+  background-image: url("/img/sign-in-with-twitter-gray.png");
+}
+/* line 56, ../scss/_header.scss */
+header .wrap #intro .not-signed-in:hover {
+  cursor: pointer;
+  border: solid 1px #d1d1d1;
+  border-radius: 4px;
+}
+
+/**
+  	Mixin to handle transitions.
+  	@param{List} $props SASS list of properties that need to be transitions.
+  	@param{Number} $time time for the transition
+  	@param{String} $easeType type of easing to be used.
+*/
+/**
+  	Mixin to handle transforms.
+  	@param{List} $props SASS list of properties that need to be transitions.
+  	@param{Number} $time time for the transition
+  	@param{String} $easeType type of easing to be used.
+*/
+/**
+  Calculates a em font based on the
+  standard 100% font size for the browser,
+  which is usually 16px
+*/
+/* line 3, ../scss/_walkthru.scss */
+#walkthru {
+  position: absolute;
+  top: -9000px;
+  width: 100%;
+  min-height: 100%;
+}
+/* line 9, ../scss/_walkthru.scss */
+#walkthru .slide {
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* line 15, ../scss/_walkthru.scss */
+#walkthru #slide1 {
+  background: red;
+}
+/* line 17, ../scss/_walkthru.scss */
+#walkthru #slide1 h2 {
+  color: #fff;
+  position: relative;
+  font-size: 300%;
+  padding: 10px;
+}
+
+/**
+  	Mixin to handle transitions.
+  	@param{List} $props SASS list of properties that need to be transitions.
+  	@param{Number} $time time for the transition
+  	@param{String} $easeType type of easing to be used.
+*/
+/**
+  	Mixin to handle transforms.
+  	@param{List} $props SASS list of properties that need to be transitions.
+  	@param{Number} $time time for the transition
+  	@param{String} $easeType type of easing to be used.
+*/
+/**
+  Calculates a em font based on the
+  standard 100% font size for the browser,
+  which is usually 16px
+*/
+/* line 4, ../scss/main.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 9, ../scss/main.scss */
+body {
+  font-family: "proxima-nova-alt";
+  background: #e1e8ed;
+  color: #292f33;
+}
+
+/* line 15, ../scss/main.scss */
+#possible-candidates {
+  display: none;
+}
+
+/* line 20, ../scss/main.scss */
+#instructions .title {
+  font-size: 600%;
+  letter-spacing: -3px;
+  text-align: center;
+}
+/* line 26, ../scss/main.scss */
+#instructions p {
+  padding-top: 20px;
+  display: block;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* line 34, ../scss/main.scss */
+#instructions .button {
+  max-width: 200px;
+  position: relative;
+  top: 20px;
+  height: 60px;
+  background-color: #db4437;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 1px 1px 8px rgba(200, 200, 200, 0.8);
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+/* line 44, ../scss/main.scss */
+#instructions .button span {
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  position: relative;
+  padding: 20px;
+  font-size: 130%;
+}
+/* line 53, ../scss/main.scss */
+#instructions .button:hover {
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  color: #55acee;
+  background-color: #4285f4;
+}
+
+/* line 64, ../scss/main.scss */
+#sending-panel {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  top: 0;
+  background: #0f9d58;
+  color: #fff;
+}
+
+/* line 73, ../scss/main.scss */
+#end-panel {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  top: 0;
+  background: #f4b400;
+  color: #fff;
+}
+/* line 80, ../scss/main.scss */
+#end-panel .title {
+  letter-spacing: 4px;
+}
+/* line 84, ../scss/main.scss */
+#end-panel p {
+  font-size: 165%;
+  padding-bottom: 20px;
+}
+
+/* line 90, ../scss/main.scss */
+#loading {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: -1;
+}
+/* line 95, ../scss/main.scss */
+#loading .title {
+  letter-spacing: 4px;
+  font-size: 400%;
+}
+
+/* line 101, ../scss/main.scss */
+#disclaimer {
+  position: absolute;
+  bottom: 0;
+  max-width: 400px;
+  left: 50%;
+  margin-left: -70px;
+  padding: 40px;
+  margin-top: 400px;
+  background: #f4b400;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+/* line 111, ../scss/main.scss */
+#disclaimer:hover {
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  -moz-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  background-color: #0f9d58;
+  color: "#fff";
+  cursor: pointer;
+}
+/* line 116, ../scss/main.scss */
+#disclaimer:hover a {
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  color: "#fff";
+}
+/* line 121, ../scss/main.scss */
+#disclaimer a {
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  color: #333;
+}
