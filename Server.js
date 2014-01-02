@@ -67,7 +67,7 @@ app.start(PORT);
 /**
  * Home page
  */
-app.router.get("/",function(){
+app.router.get("/awkwardfriendship",function(){
     var res = this.res;
 
     var parent = this;
@@ -80,16 +80,16 @@ app.router.get("/",function(){
 
 });
 
-app.router.post("/tweet",function(){
+app.router.post("/awkwardfriendship/tweet",function(){
     var res = this.res;
     //var data = JSON.parse(this.req.chunks.toString("utf-8"));
     var data = {
         message:Math.random() * 999999999
     }
     tw.tweet(data,function(tweet_data){
-
+        var sender = JSON.parse(tweet_data).user.screen_name;
         //log the tweet for the user in FB
-        Flame.pushTweet("sortofsleepy",{
+        Flame.pushTweet(sender,{
             tweet:tweet_data
         })
 
@@ -108,7 +108,7 @@ app.router.post("/tweet",function(){
 })
 
 
-app.router.get("/signin",function(){
+app.router.get("/awkwardfriendship/signin",function(){
     var res = this.res;
     tw.init(res);
 });
@@ -131,7 +131,7 @@ app.router.get("/status",function(){
 /**
  * Polls for and stores user handles to tweet at.
  */
-app.router.get("/stock",function(){
+app.router.get("/awkwardfriendship/stock",function(){
     var res = this.res;
     console.log("stocking users");
 
@@ -178,7 +178,7 @@ app.router.get("/stock",function(){
 /**
  * Needed route to swap reg token for access token
  */
-app.router.get("/preauth",function(){
+app.router.get("/awkwardfriendship/preauth",function(){
     var res = this.res;
     var session = this.req.session;
     tw.getAccess(this.req,function(token,secret){
@@ -215,7 +215,7 @@ app.router.get("/preauth",function(){
 /**
  * Fetches our user's details from teh server
  */
-app.router.get("/credentials",function(){
+app.router.get("/awkwardfriendship/credentials",function(){
     var res = this.res;
     res.writeHead(200,{'Content-Type':"application/json"});
     tw.getCurrentUser(function(data){
@@ -240,7 +240,7 @@ app.router.get("/revoke",function(){
 
 })
 
-app.router.path("/send",function(){
+app.router.path("/awkwardfriendship/send",function(){
     this.post(function(){
        this.req.on("data",function(chunk){
            console.log("here");
@@ -256,7 +256,7 @@ app.router.path("/send",function(){
  * gets a list of possible users
  */
 
-app.router.get("/users",function(){
+app.router.get("/awkwardfriendship/users",function(){
     var res = this.res;
     var req = this.req;
 

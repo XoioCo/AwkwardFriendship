@@ -37,24 +37,23 @@
 
 <script type="text/javascript" src="/js/Hogan.js"></script>
 <script type="text/javascript" src="/js/TweenMax/TweenMax.min.js"></script>
-<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
-<script type='text/javascript' src='/js/Firebase.js'></script>
-
 <script type="text/javascript" src="//use.typekit.net/lhk4pcm.js"></script>
 
-<!--<script type="text/javascript" src="//use.typekit.net/lub4veh.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
--->
-<script type="text/javascript" src="/js/dart.js"></script>
+<!--<script type="text/javascript" src="//use.typekit.net/lub4veh.js"></script>-->
+
+<!--<script type="text/javascript" src="/js/dart.js"></script>
 <script type="text/javascript" src="/js/interop.js"></script>
 <script type="text/javascript" src="/js/main.dart.js"></script>
-
-
-<!--<script type="application/dart" src="main.dart"></script>
 -->
+<script type="application/dart" src="main.dart"></script>
+
 <script type="text/javascript">
     (function(){
-        var loading = document.getElementById("loading");
+        var send = document.getElementById("send");
+
+        send.addEventListener("click",function(){
+           ga('tweet','event','click','tweetbutton');
+        })
         Typekit.load();
     })();
 

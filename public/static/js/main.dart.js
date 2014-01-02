@@ -414,8 +414,8 @@ var $$ = {};
         H.stringTypeCheck(t2);
         P.print($.get$messages()[3] + ("@" + H.S(t2) + " ") + (" #akwardfriendship " + t1));
       } else {
-        P.print(S.randomMessage(t2, t1.getUrl$0(), "#randomchristmas"));
-        O.Request_post("/tweet", C.C_JsonCodec.encode$1(H.fillLiteralMap(["message", S.randomMessage(this.recipient, $.photo.getUrl$0(), "#randomchristmas"), "to", this.recipient, "from", "sortofsleepy"], P.LinkedHashMap_LinkedHashMap(null, null, null, null, null))), new L.Tweet_sendMessage_closure(callback));
+        P.print(S.randomMessage(t2, t1.getUrl$0(), "#awkwardfriendship"));
+        O.Request_post("/awkwardfriendship/tweet", C.C_JsonCodec.encode$1(H.fillLiteralMap(["message", S.randomMessage(this.recipient, $.photo.getUrl$0(), "#awkwardfriendship"), "to", this.recipient, "from", "sortofsleepy"], P.LinkedHashMap_LinkedHashMap(null, null, null, null, null))), new L.Tweet_sendMessage_closure(callback));
       }
     }, function(callback) {
       return this.sendMessage$2(callback, true);
@@ -10269,6 +10269,8 @@ var $$ = {};
     H.assertSubtype(t2, "$isStreamSubscription", [H.getTypeArgumentByIndex(t1, 0)], "$asStreamSubscription");
   }, "call$0" /* tearOffInfo */, "loadIntro$closure", 0, 0, null],
   loadMain: [function() {
+    C.HtmlDocument_methods.querySelector$1(document, "#disclaimer");
+    O.TweenMax_to(C.HtmlDocument_methods.querySelector$1(document, "#disclaimer"), 1.2, H.fillLiteralMap(["bottom", 0, "ease", "Power3.easeInOut"], P.LinkedHashMap_LinkedHashMap(null, null, null, null, null)), null);
     O.Template$($.templateRoot + "main.html", "main page", true).appendTo$2(C.HtmlDocument_methods.querySelector$1(document, "#SITE"), new F.loadMain_closure());
   }, "call$0" /* tearOffInfo */, "loadMain$closure", 0, 0, null],
   getStatus: [function() {
@@ -10304,16 +10306,18 @@ var $$ = {};
   loadCommon_closure0: {
     "": "Closure:142;",
     call$1: [function($event) {
-      J.set$href$x(C.Window_methods.get$location(window), "/signin");
+      J.set$href$x(C.Window_methods.get$location(window), "/awkwardfriendship/signin");
     }, "call$1" /* tearOffInfo */, null, 2, 0, null, 172, "call"],
     $isFunction: true
   },
   loadIntro_closure: {
     "": "Closure:142;intro_0,half_1",
     call$1: [function(e) {
-      if (J.indexOf$1$asx(C.HtmlDocument_methods.querySelector$1(document, "html").className, "wf-active") !== -1) {
+      var body = C.HtmlDocument_methods.querySelector$1(document, "html");
+      C.HtmlDocument_methods.querySelector$1(document, "#disclaimer");
+      if (J.indexOf$1$asx(body.className, "wf-active") !== -1) {
         O.TweenMax_to(this.intro_0, 1.5, H.fillLiteralMap(["marginTop", this.half_1, "ease", "Power3.easeInOut"], P.LinkedHashMap_LinkedHashMap(null, null, null, null, null)), null);
-        O.TweenMax_to(C.HtmlDocument_methods.querySelector$1(document, "#disclaimer"), 1.2, H.fillLiteralMap(["marginTop", 0, "ease", "Power3.easeInOut"], P.LinkedHashMap_LinkedHashMap(null, null, null, null, null)), null);
+        O.TweenMax_to(C.HtmlDocument_methods.querySelector$1(document, "#disclaimer"), 1.2, H.fillLiteralMap(["bottom", 0, "ease", "Power3.easeInOut"], P.LinkedHashMap_LinkedHashMap(null, null, null, null, null)), null);
         $.timer.cancel$0();
       }
     }, "call$1" /* tearOffInfo */, null, 2, 0, null, 24, "call"],
@@ -10334,7 +10338,7 @@ var $$ = {};
     call$3: [function(engine, template, element) {
       var good, send;
       if (J._getItem$1$x(window.localStorage, "user") == null && J._getItem$1$x(window.localStorage, "candidates") == null)
-        O.Request_get("/credentials", new F.loadMain__closure(template, element));
+        O.Request_get("/awkwardfriendship/credentials", new F.loadMain__closure(template, element));
       else {
         good = O.sanatizeElement("section", template.callMethod$2("render", [P.JsObject_JsObject$jsify(H.fillLiteralMap(["user", J._getItem$1$x(window.localStorage, "user"), "candidates", J._getItem$1$x(window.localStorage, "candidates"), "catchphrase", S.getRandomDirection(), "endmessage", S.getRandomEndMessage()], P.LinkedHashMap_LinkedHashMap(null, null, null, null, null)))]), ["data-user"]);
         J.add$1$ax(J.get$children$x(element), good);
@@ -10358,7 +10362,7 @@ var $$ = {};
       t2.toString;
       H.stringTypeCheck(t1);
       J._setItem$2$x(t2, "user", t1);
-      O.Request_get("/stock", new F.loadMain___closure(this.template_0, this.element_1, user));
+      O.Request_get("/awkwardfriendship/stock", new F.loadMain___closure(this.template_0, this.element_1, user));
     }, "call$1" /* tearOffInfo */, null, 2, 0, null, 3, "call"],
     $isFunction: true
   },

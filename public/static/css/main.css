@@ -251,7 +251,7 @@ body {
 /* line 101, ../scss/main.scss */
 #disclaimer {
   position: absolute;
-  bottom: 0;
+  bottom: -800px;
   max-width: 400px;
   left: 50%;
   margin-left: -70px;

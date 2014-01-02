@@ -126,16 +126,17 @@ class Tweet {
 
   void sendMessage([Function callback,bool random=true]){
     if(!random){
-      print(orderedMessage(recipient,photo.getUrl(),"#randomchristmas",3));
+      print(orderedMessage(recipient,photo.getUrl(),"#awkwardfriendship",3));
     }else{
-      print(randomMessage(recipient,photo.getUrl(),"#randomchristmas"));
-      var message = randomMessage(recipient,photo.getUrl(),"#randomchristmas");
+      print(randomMessage(recipient,photo.getUrl(),"#awkwardfriendship"));
+      var message = randomMessage(recipient,photo.getUrl(),"#awkwardfriendship");
+
       var data = {
           "message":message,
           "to":recipient,
           "from":"sortofsleepy"
       };
-      Request.post("/tweet",JSON.encode(data),(){
+      Request.post("/awkwardfriendship/tweet",JSON.encode(data),(){
         if(callback != null){
           callback();
         }

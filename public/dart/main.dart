@@ -58,7 +58,7 @@ void loadCommon(){
 //when the user clicks "sign in", lets let them sign in
   Element signin = querySelector("#signin");
   signin.onClick.listen((event){
-    window.location.href  = "/signin";
+    window.location.href  = "/awkwardfriendship/signin";
   });
 }
 
@@ -77,6 +77,7 @@ void loadIntro(){
 
   timer = new Timer.periodic(const Duration(milliseconds:10),(e){
     var body = querySelector("html");
+    var disclaimer = querySelector("#disclaimer");
 
 
     if(body.className.indexOf("wf-active") != -1){
@@ -86,8 +87,9 @@ void loadIntro(){
       });
 
 
+
       TweenMax.to(querySelector("#disclaimer"),1.2,{
-        "marginTop":0,
+        "bottom":0,
           "ease":"Power3.easeInOut"
       });
 
@@ -151,7 +153,12 @@ void debugLoad(){
  */
 void loadMain(){
 
+  var disclaimer = querySelector("#disclaimer");
 
+  TweenMax.to(querySelector("#disclaimer"),1.2,{
+      "bottom":0,
+      "ease":"Power3.easeInOut"
+  });
 
 
 
@@ -161,7 +168,7 @@ void loadMain(){
 
     if((window.localStorage["user"] == null) && (window.localStorage["candidates"] == null)){
 
-      Request.get("/credentials",(data){
+      Request.get("/awkwardfriendship/credentials",(data){
 
         //setup to decode data
         Map user = JSON.decode(data);
@@ -173,7 +180,7 @@ void loadMain(){
         window.localStorage["user"] = user["screen_name"];
 
         /** Populate our list of potential recipients */
-        Request.get("/stock",(contents){
+        Request.get("/awkwardfriendship/stock",(contents){
           window.localStorage["candidates"] = contents;
 
           //prep template optinos
