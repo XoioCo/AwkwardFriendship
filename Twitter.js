@@ -2,8 +2,8 @@
  * A Twitter library.
  * @type {string}
  */
-var key = "QSHQmsMRJ91DjegUsosqqA";
-var secret = "LjCYemgCEz5O8nzl5r5rV1rwfOMalwvb1TMqNqZXic";
+var key = "YOUR_OWN_KEY";
+var secret = "YOUR_OWN_SECRET";
 var joined = new Buffer(key + ":" + secret).toString("base64");
 
 var http = require("http");
