@@ -3,7 +3,7 @@ AwkwardFriendship
 
 A very awkward way of meeting new people.
 
-It's a very simple automated system that will randomly tweet someone a positive saying, along with a random image pulled from Flickr. I mean REALLY random, [like this one](http://farm8.staticflickr.com/7423/11699597016_412b3e55b6.jpg)
+It's a very simple system where it will allow the user to randomly tweet someone a positive saying, along with a random image pulled from Flickr. I mean REALLY random, [like this one](http://farm8.staticflickr.com/7423/11699597016_412b3e55b6.jpg)
 
 The hashtag "#awkwardfriendship" will also be attached along with the tweet.
 
